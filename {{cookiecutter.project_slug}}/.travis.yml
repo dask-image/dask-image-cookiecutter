@@ -24,10 +24,10 @@ install:
 
   # Create the test environment.
   - conda create -y -n testenv python="${PYVER}"
+  - conda env update -n testenv --file environment_dev.yml
   - source activate testenv
 
   # Install the package and dependencies.
-  - conda install -y --file requirements_dev.txt
   - pip install -e .
 
 # command to run tests, e.g. python setup.py test
