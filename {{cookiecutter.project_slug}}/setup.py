@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import setuptools
 from setuptools import setup
 import versioneer
 
@@ -40,11 +41,7 @@ setup(
     author_email="{{ cookiecutter.email }}",
     url="https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}",
     cmdclass=versioneer.get_cmdclass(),
-    packages=[
-        "{{ cookiecutter.project_slug }}",
-    ],
-    package_dir={"{{ cookiecutter.project_slug }}":
-                 "{{ cookiecutter.project_slug }}"},
+    packages=setuptools.find_packages(exclude=["tests*"]),
     include_package_data=True,
     install_requires=requirements,
 {%- if cookiecutter.open_source_license in license_classifiers %}
