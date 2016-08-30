@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import glob
+
 import setuptools
 from setuptools import setup
 import versioneer
@@ -40,6 +42,9 @@ setup(
     author="{{ cookiecutter.full_name.replace('\"', '\\\"') }}",
     author_email="{{ cookiecutter.email }}",
     url="https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}",
+    {%- if 'no' not in cookiecutter.command_line_interface|lower %}
+    scripts=glob.glob("bin/*"),
+    {%- endif %}
     cmdclass=versioneer.get_cmdclass(),
     packages=setuptools.find_packages(exclude=["tests*"]),
     include_package_data=True,
