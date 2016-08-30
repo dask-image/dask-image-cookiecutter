@@ -17,9 +17,9 @@ Features
 
 * Testing setup with ``unittest`` and ``python setup.py test`` or ``py.test``
 * Travis-CI_: Ready for Travis Continuous Integration testing
-* Tox_ testing: Setup to easily test for Python 2.7, 3.4, 3.5
+* Conda_ testing: Setup to easily test for Python 2.7, 3.4, 3.5
 * Sphinx_ docs: Documentation ready for generation with, for example, ReadTheDocs_
-* Bumpversion_: Pre-configured version bumping with a single command
+* Versioneer_: Pre-configured for ``git``-based versioning with a ``v`` prefix.
 * Auto-release to PyPI_ when you push a new tag to master (optional)
 * Command line interface using Click (optional)
 
@@ -113,11 +113,11 @@ make my own packaging experience better.
 
 
 .. _Travis-CI: http://travis-ci.org/
-.. _Tox: http://testrun.org/tox/
+.. _Conda: http://conda.pydata.org/docs/
 .. _Sphinx: http://sphinx-doc.org/
 .. _ReadTheDocs: https://readthedocs.io/
 .. _`pyup.io`: https://pyup.io/
-.. _Bumpversion: https://github.com/peritus/bumpversion
+.. _Versioneer: https://github.com/warner/python-versioneer
 .. _PyPi: https://pypi.python.org/pypi
 
 .. _`Nekroze/cookiecutter-pypackage`: https://github.com/Nekroze/cookiecutter-pypackage
