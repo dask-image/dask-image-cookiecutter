@@ -119,7 +119,7 @@ def test_bake_without_travis_pypi_setup(cookies):
     with bake_in_temp_dir(cookies, extra_context={'use_pypi_deployment_with_travis': 'n'}) as result:
         result_travis_config = yaml.load(result.project.join(".travis.yml").open())
         assert "deploy" not in result_travis_config
-        assert "python" == result_travis_config["language"]
+        assert "generic" == result_travis_config["language"]
         found_toplevel_files = [f.basename for f in result.project.listdir()]
         assert 'travis_pypi_setup.py' not in found_toplevel_files
 
