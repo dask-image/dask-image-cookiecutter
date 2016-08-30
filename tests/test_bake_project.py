@@ -213,7 +213,7 @@ def test_bake_with_no_console_script(cookies):
 
     setup_path = os.path.join(project_path, 'setup.py')
     with open(setup_path, 'r') as setup_file:
-        assert 'entry_points' not in setup_file.read()
+        assert 'scripts' not in setup_file.read()
 
 
 def test_bake_with_console_script_files(cookies):
@@ -225,7 +225,7 @@ def test_bake_with_console_script_files(cookies):
 
     setup_path = os.path.join(project_path, 'setup.py')
     with open(setup_path, 'r') as setup_file:
-        assert 'entry_points' in setup_file.read()
+        assert 'scripts' in setup_file.read()
 
 
 def test_bake_with_console_script_cli(cookies):
