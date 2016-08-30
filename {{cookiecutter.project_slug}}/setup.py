@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+{% if 'no' not in cookiecutter.command_line_interface|lower -%}
 import glob
+
+{% endif -%}
 
 import setuptools
 from setuptools import setup
