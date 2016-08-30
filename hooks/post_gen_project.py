@@ -21,4 +21,4 @@ if __name__ == '__main__':
         remove_file(cli_file)
 
     if 'Not open source' == '{{ cookiecutter.open_source_license }}':
-        remove_file('LICENSE')
+        remove_file('LICENSE.txt')
