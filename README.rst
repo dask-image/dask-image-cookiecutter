@@ -2,13 +2,13 @@
 Cookiecutter PyPackage
 ======================
 
-.. image:: https://pyup.io/repos/github/audreyr/cookiecutter-pypackage/shield.svg
-     :target: https://pyup.io/repos/github/audreyr/cookiecutter-pypackage/
+.. image:: https://pyup.io/repos/github/nanshe-org/nanshe-cookiecutter/shield.svg
+     :target: https://pyup.io/repos/github/nanshe-org/nanshe-cookiecutter/
      :alt: Updates
 
 Cookiecutter_ template for a Python package.
 
-* GitHub repo: https://github.com/audreyr/cookiecutter-pypackage/
+* GitHub repo: https://github.com/nanshe-org/nanshe-cookiecutter/
 * Documentation: https://cookiecutter-pypackage.readthedocs.io/
 * Free software: BSD license
 
@@ -30,14 +30,14 @@ Build Status
 
 Linux:
 
-.. image:: https://img.shields.io/travis/audreyr/cookiecutter-pypackage.svg
-    :target: https://travis-ci.org/audreyr/cookiecutter-pypackage
+.. image:: https://img.shields.io/travis/nanshe-org/nanshe-cookiecutter.svg
+    :target: https://travis-ci.org/nanshe-org/nanshe-cookiecutter
     :alt: Linux build status on Travis CI
 
 Windows:
 
-.. image:: https://ci.appveyor.com/api/projects/status/github/audreyr/cookiecutter-pypackage?branch=master
-    :target: https://ci.appveyor.com/project/audreyr/cookiecutter-pypackage/branch/master
+.. image:: https://ci.appveyor.com/api/projects/status/github/nanshe-org/nanshe-cookiecutter?branch=master
+    :target: https://ci.appveyor.com/project/nanshe-org/nanshe-cookiecutter/branch/master
     :alt: Windows build status on Appveyor
 
 Quickstart
@@ -50,7 +50,7 @@ Cookiecutter 1.4.0 or higher)::
 
 Generate a Python package project::
 
-    cookiecutter https://github.com/audreyr/cookiecutter-pypackage.git
+    cookiecutter https://github.com/nanshe-org/nanshe-cookiecutter.git
 
 Then:
 
@@ -123,5 +123,5 @@ make my own packaging experience better.
 .. _`tony/cookiecutter-pypackage-pythonic`: https://github.com/tony/cookiecutter-pypackage-pythonic
 .. _`ardydedase/cookiecutter-pypackage`: https://github.com/ardydedase/cookiecutter-pypackage
 .. _github comparison view: https://github.com/tony/cookiecutter-pypackage-pythonic/compare/audreyr:master...master
-.. _`network`: https://github.com/audreyr/cookiecutter-pypackage/network
-.. _`family tree`: https://github.com/audreyr/cookiecutter-pypackage/network/members
+.. _`network`: https://github.com/nanshe-org/nanshe-cookiecutter/network
+.. _`family tree`: https://github.com/nanshe-org/nanshe-cookiecutter/network/members

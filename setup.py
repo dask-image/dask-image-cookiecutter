@@ -9,7 +9,7 @@ setup(
     author='Audrey Roy Greenfeld',
     license='BSD',
     author_email='aroy@alum.mit.edu',
-    url='https://github.com/audreyr/cookiecutter-pypackage',
+    url='https://github.com/nanshe-org/nanshe-cookiecutter',
     keywords=['cookiecutter', 'template', 'package', ],
     classifiers=[
         'Development Status :: 4 - Beta',
