@@ -40,7 +40,12 @@ import {{ cookiecutter.project_slug }}
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.viewcode']
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.viewcode',
+    'sphinx.ext.todo',
+    'sphinx.ext.napoleon'
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -273,3 +278,29 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+
+# Run sphinx-apidoc before building docs.
+def run_apidoc(_):
+    import sphinx.apidoc
+
+    ignore_paths = [
+        "../setup.py",
+        "../tests",
+        "../travis_pypi_setup.py",
+        "../versioneer.py"
+    ]
+    sphinx.apidoc.main(
+        [
+            sphinx.apidoc.__file__,
+            "-f",
+            "-T",
+            "-e",
+            "-M",
+            "-o", ".",
+            ".."
+        ] + ignore_paths
+    )
+
+def setup(app):
+    app.connect('builder-inited', run_apidoc)
