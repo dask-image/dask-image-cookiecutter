@@ -34,7 +34,13 @@ install:
 
 # command to run tests, e.g. python setup.py test
 script:
-  - python setup.py test
+  - coverage erase
+  - coverage run --source . setup.py test
+  - coverage report
+
+# Report coverage
+after_success:
+  - coveralls
 
 # Disable email notifications.
 notifications:
