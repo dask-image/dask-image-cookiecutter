@@ -13,6 +13,10 @@
 .. image:: https://readthedocs.org/projects/{{ cookiecutter.project_slug | replace("_", "-") }}/badge/?version=latest
         :target: https://{{ cookiecutter.project_slug | replace("_", "-") }}.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
+
+.. image:: https://coveralls.io/repos/github/jakirkham/metawrap/badge.svg
+        :target: https://coveralls.io/github/jakirkham/metawrap
+        :alt: Coveralls
 {%- endif %}
 
 
