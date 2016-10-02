@@ -17,6 +17,10 @@
 .. image:: https://coveralls.io/repos/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/badge.svg
         :target: https://coveralls.io/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
         :alt: Coveralls
+
+.. image:: https://img.shields.io/github/license/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.svg
+        :target: ./LICENSE.txt
+        :alt: License
 {%- endif %}
 
 
