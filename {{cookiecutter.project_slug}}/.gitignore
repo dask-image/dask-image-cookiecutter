@@ -58,3 +58,6 @@ docs/{{cookiecutter.project_slug}}*.rst
 
 # PyBuilder
 target/
+
+# pyenv python configuration file
+.python-version
