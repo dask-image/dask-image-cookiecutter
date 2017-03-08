@@ -25,7 +25,7 @@ install:
   # Create the test environment.
   - conda create -y -n testenv python="${PYVER}"
   - conda remove -y --force -n testenv openssl
-  - conda env update -n testenv --file environment_dev.yml
+  - conda env update -n testenv --file environment_ci.yml
   - conda list --full-name -n testenv openssl || conda install -y -n testenv openssl
   - source activate testenv
 
