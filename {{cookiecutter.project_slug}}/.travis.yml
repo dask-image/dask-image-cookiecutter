@@ -6,6 +6,7 @@ sudo: false
 language: generic
 
 env:
+  - PYVER="3.6"
   - PYVER="3.5"
   - PYVER="3.4"
   - PYVER="2.7"
@@ -40,6 +41,16 @@ script:
 
 # Report coverage
 after_success:
+  - if [[ "${PYVER}" == "3.6" ]];
+    then
+        source activate root;
+        conda remove -y --force -n testenv --all;
+        conda create -y -n testenv python="3.5";
+        conda remove -y --force -n testenv openssl;
+        conda env update -n testenv --file environment_ci.yml;
+        conda list --full-name -n testenv openssl || conda install -y -n testenv openssl;
+        source activate testenv;
+    fi
   - coveralls
 
 # Disable email notifications.
