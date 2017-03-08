@@ -13,11 +13,15 @@
 .. image:: https://readthedocs.org/projects/{{ cookiecutter.project_slug | replace("_", "-") }}/badge/?version=latest
         :target: https://{{ cookiecutter.project_slug | replace("_", "-") }}.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
-{%- endif %}
 
-.. image:: https://pyup.io/repos/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/shield.svg
-     :target: https://pyup.io/repos/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/
-     :alt: Updates
+.. image:: https://coveralls.io/repos/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/badge.svg
+        :target: https://coveralls.io/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
+        :alt: Coveralls
+
+.. image:: https://img.shields.io/github/license/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.svg
+        :target: ./LICENSE.txt
+        :alt: License
+{%- endif %}
 
 
 {{ cookiecutter.project_short_description }}
@@ -35,8 +39,8 @@ Features
 Credits
 ---------
 
-This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+This package was created with Cookiecutter_ and the `nanshe-org/nanshe-cookiecutter`_ project template.
 
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+.. _`nanshe-org/nanshe-cookiecutter`: https://github.com/nanshe-org/nanshe-cookiecutter
 

@@ -3,7 +3,6 @@ language: python
 python: 3.5
 env:
   - TOXENV=py27
-  - TOXENV=py33
   - TOXENV=py34
   - TOXENV=py35
 
@@ -12,14 +11,3 @@ install:
 
 script:
   - tox
-
-deploy:
-  provider: pypi
-  distributions: sdist
-  user: audreyr
-  password:
-    secure: PLEASE_REPLACE_ME
-  on:
-    tags: true
-    repo: audreyr/python_boilerplate
-    condition: $TOXENV == py27
