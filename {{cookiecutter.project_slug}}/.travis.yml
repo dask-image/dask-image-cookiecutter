@@ -36,7 +36,7 @@ install:
 script:
   - coverage erase
   - coverage run --source . setup.py test
-  - coverage report
+  - coverage report -m
 
 # Report coverage
 after_success:
