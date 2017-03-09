@@ -6,7 +6,6 @@ channels:
 dependencies:
   - pip==9.0.1
   - wheel==0.29.0
-  - flake8==2.6.2
   - coverage==3.7.1
   - python-coveralls==2.5.0
 {%- if cookiecutter.use_pytest == 'y' %}
