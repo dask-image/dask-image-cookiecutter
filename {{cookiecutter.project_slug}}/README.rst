@@ -6,12 +6,15 @@
 {% if is_open_source %}
 .. image:: https://img.shields.io/pypi/v/{{ cookiecutter.project_slug }}.svg
         :target: https://pypi.python.org/pypi/{{ cookiecutter.project_slug }}
+        :alt: PyPI
 
 .. image:: https://anaconda.org/conda-forge/{{ cookiecutter.project_slug }}/badges/version.svg
         :target: https://anaconda.org/conda-forge/{{ cookiecutter.project_slug }}
+        :alt: conda-forge
 
 .. image:: https://img.shields.io/travis/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.svg
         :target: https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
+        :alt: Travis CI
 
 .. image:: https://readthedocs.org/projects/{{ cookiecutter.project_slug | replace("_", "-") }}/badge/?version=latest
         :target: https://{{ cookiecutter.project_slug | replace("_", "-") }}.readthedocs.io/en/latest/?badge=latest
