@@ -1,0 +1,13 @@
+name: {{cookiecutter.project_slug}}_env
+
+channels:
+  - conda-forge
+
+dependencies:
+  - pip==9.0.1
+  - wheel==0.29.0
+  - coverage==3.7.1
+  - python-coveralls==2.5.0
+{%- if cookiecutter.use_pytest == 'y' %}
+  - pytest==2.9.2
+{%- endif %}
