@@ -11,7 +11,9 @@ Contents:
    usage
    api
    contributing
-   {% if cookiecutter.create_author_file == 'y' -%}authors{% endif -%}
+   {% if cookiecutter.create_author_file == 'y' -%}
+   authors
+   {% endif -%}
    history
 
 Indices and tables
