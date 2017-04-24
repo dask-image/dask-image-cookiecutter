@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 
 """
-test_{{ cookiecutter.project_slug }}
+test_core
 ----------------------------------
 
-Tests for `{{ cookiecutter.project_slug }}` module.
+Tests for `core` module.
 """
 
 {% if cookiecutter.use_pytest == 'y' -%}
@@ -19,7 +19,7 @@ from contextlib import contextmanager
 from click.testing import CliRunner
 {%- endif %}
 
-from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug }}
+from {{ cookiecutter.project_slug }} import core
 {%- if cookiecutter.command_line_interface|lower == 'click' %}
 from {{ cookiecutter.project_slug }} import cli
 {%- endif %}
@@ -54,7 +54,7 @@ def test_command_line_interface():
 
 {%- endif %}
 {% else %}
-class Test{{ cookiecutter.project_slug|title }}(unittest.TestCase):
+class TestCore(unittest.TestCase):
 
     def setUp(self):
         pass
