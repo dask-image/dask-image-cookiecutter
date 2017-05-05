@@ -238,6 +238,10 @@ def test_bake_with_no_console_script(cookies):
     context = {'command_line_interface': "No command-line interface"}
     result = cookies.bake(extra_context=context)
     project_path, project_slug, project_dir = project_info(result)
+
+    print("project_path = %s" % project_path)
+    print("project_slugh = %s" % project_slug)
+    print("project_dir = %s" % project_dir)
     found_project_files = os.listdir(project_dir)
     assert "cli.py" not in found_project_files
     assert not result.project.join('bin').exists()
