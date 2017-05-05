@@ -4,4 +4,4 @@ API
 .. toctree::
    :glob:
 
-   {{cookiecutter.project_slug}}
+   {{cookiecutter.project_modname}}

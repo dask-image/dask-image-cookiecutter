@@ -54,7 +54,7 @@ coverage.xml
 
 # Sphinx documentation
 docs/_build/
-docs/{{cookiecutter.project_slug}}*.rst
+docs/{{cookiecutter.project_modname}}*.rst
 
 # PyBuilder
 target/

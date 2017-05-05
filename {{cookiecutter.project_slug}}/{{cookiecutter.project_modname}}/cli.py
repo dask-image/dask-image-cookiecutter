@@ -7,7 +7,7 @@ import click
 def main(args=None):
     """Console script for {{cookiecutter.project_slug}}"""
     click.echo("Replace this message by putting your code into "
-               "{{cookiecutter.project_slug}}.cli.main")
+               "{{cookiecutter.project_modname}}.cli.main")
     click.echo("See click documentation at http://click.pocoo.org/")
 
 

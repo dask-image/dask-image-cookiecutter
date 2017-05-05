@@ -1,1 +1,1 @@
-{{cookiecutter.project_slug}}/_version.py export-subst
+{{cookiecutter.project_modname}}/_version.py export-subst

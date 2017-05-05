@@ -1,6 +1,7 @@
 from contextlib import contextmanager
 import shlex
 import os
+import pkgutil
 import sys
 import subprocess
 import yaml
@@ -69,7 +70,12 @@ def project_info(result):
     """Get toplevel dir, project_slug, and project dir from baked cookies"""
     project_path = str(result.project)
     project_slug = os.path.split(project_path)[-1]
-    project_dir = os.path.join(project_path, project_slug)
+    project_modname = project_slug
+    for _, m, __ in pkgutil.iter_modules([project_path]):
+        if m not in ["setup", "tests", "travis_pypi_setup", "versioneer"]:
+            project_modname = m
+            break
+    project_dir = os.path.join(project_path, project_modname)
     return project_path, project_slug, project_dir
 
 
@@ -194,8 +200,25 @@ def test_not_using_pytest(cookies):
         assert "import pytest" not in ''.join(lines)
 
 
-def test_project_with_invalid_module_name(cookies):
+def test_project_with_dash_slug_name(cookies):
     result = cookies.bake(extra_context={'project_name': 'something-with-a-dash'})
+    assert result.project is not None
+    result = cookies.bake()
+    project_path = str(result.project)
+
+    # when:
+    travis_setup_cmd = ('python travis_pypi_setup.py'
+                        ' --repo dask-image/dask-image-cookiecutter --password invalidpass')
+    run_inside_dir(travis_setup_cmd, project_path)
+
+    # then:
+    result_travis_config = yaml.load(open(os.path.join(project_path, ".travis.yml")))
+    assert "secure" in result_travis_config["deploy"]["password"],\
+        "missing password config in .travis.yml"
+
+
+def test_project_with_invalid_module_name(cookies):
+    result = cookies.bake(extra_context={'project_modname': 'something-with-a-dash'})
     assert result.project is None
     result = cookies.bake()
     project_path = str(result.project)
@@ -215,6 +238,10 @@ def test_bake_with_no_console_script(cookies):
     context = {'command_line_interface': "No command-line interface"}
     result = cookies.bake(extra_context=context)
     project_path, project_slug, project_dir = project_info(result)
+
+    print("project_path = %s" % project_path)
+    print("project_slugh = %s" % project_slug)
+    print("project_dir = %s" % project_dir)
     found_project_files = os.listdir(project_dir)
     assert "cli.py" not in found_project_files
     assert not result.project.join('bin').exists()

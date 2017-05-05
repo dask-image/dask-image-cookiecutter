@@ -43,7 +43,7 @@ def get_config():
     cfg.style = "pep440"
     cfg.tag_prefix = "v"
     cfg.parentdir_prefix = "{{cookiecutter.project_slug}}"
-    cfg.versionfile_source = "{{cookiecutter.project_slug}}/_version.py"
+    cfg.versionfile_source = "{{cookiecutter.project_modname}}/_version.py"
     cfg.verbose = False
     return cfg
 
