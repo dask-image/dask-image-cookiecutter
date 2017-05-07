@@ -1,41 +1,21 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""
-test_core
-----------------------------------
+from __future__ import absolute_import
 
-Tests for `core` module.
-"""
-
-import pytest
-import sys
-import unittest
 {%- if cookiecutter.command_line_interface|lower == 'click' %}
-from contextlib import contextmanager
 from click.testing import CliRunner
-{%- endif %}
-
-from {{ cookiecutter.project_slug }} import core
-{%- if cookiecutter.command_line_interface|lower == 'click' %}
 from {{ cookiecutter.project_slug }} import cli
 {%- endif %}
 
-
-@pytest.fixture
-def response():
-    """Sample pytest fixture.
-    See more at: http://doc.pytest.org/en/latest/fixture.html
-    """
-    # import requests
-    # return requests.get('https://github.com/audreyr/cookiecutter-pypackage')
+import pytest
 
 
-def test_content(response):
-    """Sample pytest test function with the pytest fixture as an argument.
-    """
-    # from bs4 import BeautifulSoup
-    # assert 'GitHub' in BeautifulSoup(response.content).title.string
+def test_import_core():
+    try:
+        from {{ cookiecutter.project_slug }} import core
+    except ImportError:
+        pytest.fail("Unable to import `core`.")
 
 
 {%- if cookiecutter.command_line_interface|lower == 'click' %}
