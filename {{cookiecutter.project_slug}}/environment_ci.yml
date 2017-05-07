@@ -8,6 +8,4 @@ dependencies:
   - wheel==0.29.0
   - coverage==4.0.3
   - python-coveralls==2.7.0
-{%- if cookiecutter.use_pytest == 'y' %}
-  - pytest==2.9.2
-{%- endif %}
+  - pytest==3.0.5
