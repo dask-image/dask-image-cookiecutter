@@ -2,13 +2,13 @@
 Cookiecutter PyPackage
 ======================
 
-.. image:: https://pyup.io/repos/github/audreyr/cookiecutter-pypackage/shield.svg
-     :target: https://pyup.io/repos/github/audreyr/cookiecutter-pypackage/
+.. image:: https://pyup.io/repos/github/dask-image/dask-image-cookiecutter/shield.svg
+     :target: https://pyup.io/repos/github/dask-image/dask-image-cookiecutter/
      :alt: Updates
 
 Cookiecutter_ template for a Python package.
 
-* GitHub repo: https://github.com/audreyr/cookiecutter-pypackage/
+* GitHub repo: https://github.com/dask-image/dask-image-cookiecutter/
 * Documentation: https://cookiecutter-pypackage.readthedocs.io/
 * Free software: BSD license
 
@@ -17,9 +17,9 @@ Features
 
 * Testing setup with ``unittest`` and ``python setup.py test`` or ``py.test``
 * Travis-CI_: Ready for Travis Continuous Integration testing
-* Tox_ testing: Setup to easily test for Python 2.6, 2.7, 3.3, 3.4, 3.5
+* Conda_ testing: Setup to easily test for Python 2.7, 3.4, 3.5
 * Sphinx_ docs: Documentation ready for generation with, for example, ReadTheDocs_
-* Bumpversion_: Pre-configured version bumping with a single command
+* Versioneer_: Pre-configured for ``git``-based versioning with a ``v`` prefix.
 * Auto-release to PyPI_ when you push a new tag to master (optional)
 * Command line interface using Click (optional)
 
@@ -30,14 +30,14 @@ Build Status
 
 Linux:
 
-.. image:: https://img.shields.io/travis/audreyr/cookiecutter-pypackage.svg
-    :target: https://travis-ci.org/audreyr/cookiecutter-pypackage
+.. image:: https://img.shields.io/travis/dask-image/dask-image-cookiecutter.svg
+    :target: https://travis-ci.org/dask-image/dask-image-cookiecutter
     :alt: Linux build status on Travis CI
 
 Windows:
 
-.. image:: https://ci.appveyor.com/api/projects/status/github/audreyr/cookiecutter-pypackage?branch=master&svg=true
-    :target: https://ci.appveyor.com/project/audreyr/cookiecutter-pypackage/branch/master
+.. image:: https://ci.appveyor.com/api/projects/status/github/jakirkham/dask-image-cookiecutter?branch=master&svg=true
+    :target: https://ci.appveyor.com/project/jakirkham/dask-image-cookiecutter/branch/master
     :alt: Windows build status on Appveyor
 
 Quickstart
@@ -50,7 +50,7 @@ Cookiecutter 1.4.0 or higher)::
 
 Generate a Python package project::
 
-    cookiecutter https://github.com/audreyr/cookiecutter-pypackage.git
+    cookiecutter https://github.com/dask-image/dask-image-cookiecutter.git
 
 Then:
 
@@ -63,7 +63,6 @@ Then:
 * Release your package by pushing a new tag to master.
 * Add a `requirements.txt` file that specifies the packages you will need for
   your project and their versions. For more info see the `pip docs for requirements files`_.
-* Activate your project on `pyup.io`_.
 
 .. _`pip docs for requirements files`: https://pip.pypa.io/en/stable/user_guide/#requirements-files
 
@@ -113,16 +112,16 @@ make my own packaging experience better.
 
 
 .. _Travis-CI: http://travis-ci.org/
-.. _Tox: http://testrun.org/tox/
+.. _Conda: http://conda.pydata.org/docs/
 .. _Sphinx: http://sphinx-doc.org/
 .. _ReadTheDocs: https://readthedocs.io/
 .. _`pyup.io`: https://pyup.io/
-.. _Bumpversion: https://github.com/peritus/bumpversion
+.. _Versioneer: https://github.com/warner/python-versioneer
 .. _PyPi: https://pypi.python.org/pypi
 
 .. _`Nekroze/cookiecutter-pypackage`: https://github.com/Nekroze/cookiecutter-pypackage
 .. _`tony/cookiecutter-pypackage-pythonic`: https://github.com/tony/cookiecutter-pypackage-pythonic
 .. _`ardydedase/cookiecutter-pypackage`: https://github.com/ardydedase/cookiecutter-pypackage
 .. _github comparison view: https://github.com/tony/cookiecutter-pypackage-pythonic/compare/audreyr:master...master
-.. _`network`: https://github.com/audreyr/cookiecutter-pypackage/network
-.. _`family tree`: https://github.com/audreyr/cookiecutter-pypackage/network/members
+.. _`network`: https://github.com/dask-image/dask-image-cookiecutter/network
+.. _`family tree`: https://github.com/dask-image/dask-image-cookiecutter/network/members

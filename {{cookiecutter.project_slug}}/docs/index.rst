@@ -4,13 +4,16 @@ Welcome to {{ cookiecutter.project_name }}'s documentation!
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-   readme
+   Readme <readme>
    installation
    usage
+   api
    contributing
-   {% if cookiecutter.create_author_file == 'y' -%}authors{% endif -%}
+   {% if cookiecutter.create_author_file == 'y' -%}
+   authors
+   {% endif -%}
    history
 
 Indices and tables

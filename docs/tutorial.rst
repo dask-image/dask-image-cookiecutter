@@ -4,7 +4,7 @@ Tutorial
 .. note:: Did you find any of these instructions confusing? `Edit this file`_
           and submit a pull request with your improvements!
 
-.. _`Edit this file`: https://github.com/audreyr/cookiecutter-pypackage/blob/master/docs/tutorial.rst
+.. _`Edit this file`: https://github.com/dask-image/dask-image-cookiecutter/blob/master/docs/tutorial.rst
 
 To start with, you will need a `GitHub account`_ and an account on `PyPI`_. Create these before you get started on this tutorial. If you are new to Git and GitHub, you should probably spend a few minutes on some of the tutorials at the top of the page at `GitHub Help`_.
 
@@ -53,7 +53,7 @@ Use cookiecutter, pointing it at the cookiecutter-pypackage repo:
 
 .. code-block:: bash
 
-    cookiecutter https://github.com/audreyr/cookiecutter-pypackage.git
+    cookiecutter https://github.com/dask-image/dask-image-cookiecutter.git
 
 You'll be asked to enter a bunch of values to set the package up.
 If you don't know what to enter, stick with the defaults.
@@ -62,7 +62,7 @@ If you don't know what to enter, stick with the defaults.
 Step 3: Create a GitHub Repo
 ----------------------------
 
-Go to your GitHub account and create a new repo named ``mypackage``, where ``mypackage`` matches the ``[project_slug]`` from your answers to running cookiecutter. This is so that Travis CI and pyup.io can find it when we get to Step 5.
+Go to your GitHub account and create a new repo named ``mypackage``, where ``mypackage`` matches the ``[project_slug]`` from your answers to running cookiecutter. This is so that services can find it when we get to Step 5.
 
 ``If your virtualenv folder is within your project folder, be sure to add the virtualenv folder name to your .gitignore file.``
 
@@ -144,22 +144,7 @@ Now your documentation will get rebuilt when you make documentation changes to y
 
 .. _`ReadTheDocs`: https://readthedocs.org/
 
-Step 7: Set Up pyup.io
-----------------------
-
-`pyup.io`_ is a service that helps you to keep your requirements files up to date. It sends you automated
-pull requests whenever there's a new release for one of your dependencies.
-
-To use it, create a new account at `pyup.io`_ or log into your existing account.
-
-Click on the green ``Add Repo`` button in the top left corner and select the repo you created in Step 3. A popup will
-ask you whether you want to pin your dependencies. Click on ``Pin`` to add the repo.
-
-Once your repo is set up correctly, the pyup.io badge will show your current update status.
-
-.. _`pyup.io`: https://pyup.io/
-
-Step 8: Release on PyPI
+Step 7: Release on PyPI
 -----------------------
 
 The Python Package Index or `PyPI`_ is the official third-party software repository for the Python programming language. Python developers intend it to be a comprehensive catalog of all open source Python packages.
@@ -179,4 +164,4 @@ Having problems?
 
 Visit our :ref:`troubleshooting` page for help. If that doesn't help, go to our `Issues`_ page and create a new Issue. Be sure to give as much information as possible.
 
-.. _`Issues`: https://github.com/audreyr/cookiecutter-pypackage/issues
+.. _`Issues`: https://github.com/dask-image/dask-image-cookiecutter/issues
