@@ -58,13 +58,13 @@ cmdclasses.update(versioneer.get_cmdclass())
 
 
 setup(
-    name="{{ cookiecutter.project_slug }}",
+    name="{{ cookiecutter.project_name }}",
     version=versioneer.get_version(),
     description="{{ cookiecutter.project_short_description }}",
     long_description=readme + "\n\n" + history,
     author="{{ cookiecutter.full_name.replace('\"', '\\\"') }}",
     author_email="{{ cookiecutter.email }}",
-    url="https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}",
+    url="https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}",
     {%- if 'no' not in cookiecutter.command_line_interface|lower %}
     scripts=glob.glob("bin/*"),
     {%- endif %}
@@ -76,7 +76,7 @@ setup(
     license="{{ cookiecutter.open_source_license }}",
 {%- endif %}
     zip_safe=False,
-    keywords="{{ cookiecutter.project_slug }}",
+    keywords="{{ cookiecutter.project_name }}",
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
         "Intended Audience :: Developers",

@@ -42,7 +42,7 @@ def get_config():
     cfg.VCS = "git"
     cfg.style = "pep440"
     cfg.tag_prefix = "v"
-    cfg.parentdir_prefix = "{{cookiecutter.project_slug}}"
+    cfg.parentdir_prefix = "{{cookiecutter.project_name}}"
     cfg.versionfile_source = "{{cookiecutter.project_slug}}/_version.py"
     cfg.verbose = False
     return cfg

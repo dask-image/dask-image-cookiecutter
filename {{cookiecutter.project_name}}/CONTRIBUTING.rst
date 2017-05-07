@@ -15,7 +15,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/issues.
+Report bugs at https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/issues.
 
 If you are reporting a bug, please include:
 
@@ -45,7 +45,7 @@ articles, and such.
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to file an issue at https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/issues.
+The best way to send feedback is to file an issue at https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/issues.
 
 If you are proposing a feature:
 
@@ -57,17 +57,17 @@ If you are proposing a feature:
 Get Started!
 ------------
 
-Ready to contribute? Here's how to set up `{{ cookiecutter.project_slug }}` for local development.
+Ready to contribute? Here's how to set up `{{ cookiecutter.project_name }}` for local development.
 
-1. Fork the `{{ cookiecutter.project_slug }}` repo on GitHub.
+1. Fork the `{{ cookiecutter.project_name }}` repo on GitHub.
 2. Clone your fork locally::
 
-    $ git clone git@github.com:your_name_here/{{ cookiecutter.project_slug }}.git
+    $ git clone git@github.com:your_name_here/{{ cookiecutter.project_name }}.git
 
 3. Install your local copy into an environment. Assuming you have conda installed, this is how you set up your fork for local development (on Windows drop `source`). Replace `"<some version>"` with the Python version used for testing.::
 
-    $ conda create -n {{ cookiecutter.project_slug }}env python="<some version>"
-    $ source activate {{ cookiecutter.project_slug }}env
+    $ conda create -n {{ cookiecutter.project_name }}env python="<some version>"
+    $ source activate {{ cookiecutter.project_name }}env
     $ python setup.py develop
 
 4. Create a branch for local development::
@@ -101,7 +101,7 @@ Before you submit a pull request, check that it meets these guidelines:
    your new functionality into a function with a docstring, and add the
    feature to the list in README.rst.
 3. The pull request should work for Python 2.7, 3.4, 3.5, and 3.6. Check
-   https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/pull_requests
+   https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/pull_requests
    and make sure that the tests pass for all supported Python versions.
 
 Tips
