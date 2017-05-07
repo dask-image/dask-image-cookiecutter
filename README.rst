@@ -36,7 +36,7 @@ Linux:
 
 Windows:
 
-.. image:: https://ci.appveyor.com/api/projects/status/github/jakirkham/dask-image-cookiecutter?branch=master
+.. image:: https://ci.appveyor.com/api/projects/status/github/jakirkham/dask-image-cookiecutter?branch=master&svg=true
     :target: https://ci.appveyor.com/project/jakirkham/dask-image-cookiecutter/branch/master
     :alt: Windows build status on Appveyor
 
