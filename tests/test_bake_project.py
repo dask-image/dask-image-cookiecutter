@@ -178,20 +178,11 @@ def test_bake_not_open_source(cookies):
 
 
 def test_using_pytest(cookies):
-    with bake_in_temp_dir(cookies, extra_context={'use_pytest': 'y'}) as result:
-        assert result.project.isdir()
-        test_file_path = result.project.join('tests/test_core.py')
-        lines = test_file_path.readlines()
-        assert "import pytest" in ''.join(lines)
-
-
-def test_not_using_pytest(cookies):
     with bake_in_temp_dir(cookies) as result:
         assert result.project.isdir()
         test_file_path = result.project.join('tests/test_core.py')
         lines = test_file_path.readlines()
-        assert "import unittest" in ''.join(lines)
-        assert "import pytest" not in ''.join(lines)
+        assert "import pytest" in ''.join(lines)
 
 
 def test_project_with_hyphen_in_module_name(cookies):
