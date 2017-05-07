@@ -5,10 +5,25 @@
 import glob
 
 {% endif -%}
+import sys
 
 import setuptools
 from setuptools import setup
+from setuptools.command.test import test as TestCommand
 import versioneer
+
+
+class PyTest(TestCommand):
+    description = "Run test suite with pytest"
+
+    def finalize_options(self):
+        TestCommand.finalize_options(self)
+        self.test_args = []
+        self.test_suite = True
+
+    def run_tests(self):
+        import pytest
+        sys.exit(pytest.main(self.test_args))
 
 
 with open("README.rst") as readme_file:
@@ -27,6 +42,11 @@ requirements = [
 test_requirements = [
     "pytest",
 ]
+
+cmdclasses = {
+    "test": PyTest,
+}
+cmdclasses.update(versioneer.get_cmdclass())
 
 {%- set license_classifiers = {
     "MIT license": "License :: OSI Approved :: MIT License",
@@ -48,7 +68,7 @@ setup(
     {%- if 'no' not in cookiecutter.command_line_interface|lower %}
     scripts=glob.glob("bin/*"),
     {%- endif %}
-    cmdclass=versioneer.get_cmdclass(),
+    cmdclass=cmdclasses,
     packages=setuptools.find_packages(exclude=["tests*"]),
     include_package_data=True,
     install_requires=requirements,
@@ -71,6 +91,5 @@ setup(
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
     ],
-    test_suite="tests",
     tests_require=test_requirements
 )
