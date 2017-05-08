@@ -109,4 +109,4 @@ Tips
 
 To run a subset of tests::
 
-    $ py.test tests.test_{{ cookiecutter.project_import }}
+    $ py.test tests/test_core.py
