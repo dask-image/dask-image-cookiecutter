@@ -78,7 +78,7 @@ Ready to contribute? Here's how to set up `{{ cookiecutter.project_name }}` for 
 
 5. When you're done making changes, check that your changes pass flake8 and the tests, including testing other Python versions::
 
-    $ flake8 {{ cookiecutter.project_slug }} tests
+    $ flake8 {{ cookiecutter.project_import }} tests
     $ python setup.py test or py.test
 
    To get flake8, just conda install it into your environment.
@@ -109,4 +109,4 @@ Tips
 
 To run a subset of tests::
 
-    $ py.test tests.test_{{ cookiecutter.project_slug }}
+    $ py.test tests.test_{{ cookiecutter.project_import }}

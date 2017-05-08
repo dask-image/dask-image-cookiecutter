@@ -6,7 +6,7 @@ PROJ_REGEX = r'^[_a-zA-Z][\-_a-zA-Z0-9]+$'
 MODULE_REGEX = r'^[_a-zA-Z][_a-zA-Z0-9]+$'
 
 proj_name = '{{ cookiecutter.project_name }}'
-module_name = '{{ cookiecutter.project_slug }}'
+module_name = '{{ cookiecutter.project_import }}'
 
 
 if not re.match(PROJ_REGEX, proj_name):

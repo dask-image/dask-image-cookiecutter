@@ -21,7 +21,7 @@ if __name__ == '__main__':
         remove_file('docs/authors.rst')
 
     if 'no' in '{{ cookiecutter.command_line_interface|lower }}':
-        cli_file = os.path.join('{{ cookiecutter.project_slug }}', 'cli.py')
+        cli_file = os.path.join('{{ cookiecutter.project_import }}', 'cli.py')
         remove_file(cli_file)
         remove_dir("bin")
 

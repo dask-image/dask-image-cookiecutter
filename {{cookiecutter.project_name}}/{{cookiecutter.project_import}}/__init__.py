@@ -7,4 +7,4 @@ from ._version import get_versions
 __version__ = get_versions()['version']
 del get_versions
 
-from {{ cookiecutter.project_slug }}.core import *
+from {{ cookiecutter.project_import }}.core import *
