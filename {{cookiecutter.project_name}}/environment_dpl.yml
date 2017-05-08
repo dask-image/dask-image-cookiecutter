@@ -1,4 +1,4 @@
-name: {{cookiecutter.project_slug}}_env
+name: {{cookiecutter.project_import}}_env
 
 channels:
   - conda-forge
