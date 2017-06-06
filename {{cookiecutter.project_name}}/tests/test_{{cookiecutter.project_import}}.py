@@ -11,11 +11,11 @@ from {{ cookiecutter.project_import }} import cli
 import pytest
 
 
-def test_import_core():
+def test_import_toplevel():
     try:
-        from {{ cookiecutter.project_import }} import core
+        import {{ cookiecutter.project_import }}
     except ImportError:
-        pytest.fail("Unable to import `core`.")
+        pytest.fail("Unable to import `{{ cookiecutter.project_import }}`.")
 
 
 {%- if cookiecutter.command_line_interface|lower == 'click' %}
