@@ -181,7 +181,9 @@ def test_bake_not_open_source(cookies):
 def test_using_pytest(cookies):
     with bake_in_temp_dir(cookies) as result:
         assert result.project.isdir()
-        test_file_path = result.project.join('tests/test_core.py')
+        test_file_path = result.project.join(
+            'tests/test_%s.py' % project_info(result)[1]
+        )
         lines = test_file_path.readlines()
         assert "import pytest" in ''.join(lines)
 
