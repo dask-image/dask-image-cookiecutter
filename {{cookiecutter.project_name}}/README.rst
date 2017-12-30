@@ -8,7 +8,7 @@
         :target: https://pypi.python.org/pypi/{{ cookiecutter.project_name }}
         :alt: PyPI
 
-.. image:: https://anaconda.org/conda-forge/{{ cookiecutter.project_name }}/badges/version.svg
+.. image:: https://img.shields.io/conda/vn/conda-forge/{{ cookiecutter.project_name }}.svg
         :target: https://anaconda.org/conda-forge/{{ cookiecutter.project_name }}
         :alt: conda-forge
 
